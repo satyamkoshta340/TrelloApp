@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '46)hcfzcny)e5jx+ng+8#8fp8f#q3dyaqd)d#)b3=ug#t=-#=m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://enigmatic-beyond-02288.herokuapp.com/']
 
 
 # Application definition
