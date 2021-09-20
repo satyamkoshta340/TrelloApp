@@ -29,7 +29,7 @@ DEBUG = True
 # DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'FALSE'
 
 #where can we access the server
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['enigmatic-beyond-02288.herokuapp.com']
 
 
 # Application definition
