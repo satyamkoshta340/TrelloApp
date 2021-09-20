@@ -5,7 +5,7 @@ class TaskListForm(forms.ModelForm):
   class Meta:
     model = TaskList
     # TODO: Add the 'board' field here
-    fields = ['name']
+    fields = ['name', 'board']
 
 class TaskForm(forms.ModelForm):
   class Meta:
@@ -18,7 +18,6 @@ class TaskForm(forms.ModelForm):
 class BoardForm(forms.ModelForm):
   # TODO: Add the meta class inside to show the board name field in the form
   # Created at field should not be shown in the form
-
-
-  # Remove the next pass statement after done
-  pass
+  class Meta:
+    model = Board
+    fields = ['name']

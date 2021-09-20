@@ -71,12 +71,11 @@ def add_board(request):
   if request.method == 'POST':
     # TODO: extract form data from request in form object
     # form = ...
-
+    form = BoardForm(data= request.POST)
     if form.is_valid():
       # TODO: Save the form and redirect to index
-
-      # Remove this pass statement when done
-      pass
+      form.save()
+      return redirect('index')
   else:
     form = BoardForm()
   return render(request, 'trello_app/forms/new_board.html', {'form': form})

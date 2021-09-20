@@ -4,19 +4,20 @@ from django.utils import timezone
 # Create your models here.
 class Board(models.Model):
   # TODO: Add name field with max_length = 50
-  
+  name = models.CharField(max_length= 50, null = True)
   # TODO: Add created_at field with default value as timezone.now()
-  
+  created_at = models.DateTimeField(default=timezone.now)
   # Remove the next line pass when done with above
   pass
 
 class TaskList(models.Model):
   name = models.CharField(max_length=50)
   created_at = models.DateTimeField(
-    default=timezone.now()
+    default=timezone.now
   )
   # TODO: Add board field which is foreign key to the Board model
   # board = ...
+  board = models.ForeignKey(Board, on_delete= models.CASCADE, null = True)
 
   def __str__(self):
     return f"{self.name}"

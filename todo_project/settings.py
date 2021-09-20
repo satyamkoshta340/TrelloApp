@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,11 +22,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '46)hcfzcny)e5jx+ng+8#8fp8f#q3dyaqd)d#)b3=ug#t=-#=m'
+# SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
+# DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'FALSE'
 
-ALLOWED_HOSTS = ['https://enigmatic-beyond-02288.herokuapp.com/']
+#where can we access the server
+ALLOWED_HOSTS = []
 
 
 # Application definition
