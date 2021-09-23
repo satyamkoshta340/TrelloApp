@@ -25,16 +25,17 @@ SECRET_KEY = '46)hcfzcny)e5jx+ng+8#8fp8f#q3dyaqd)d#)b3=ug#t=-#=m'
 # SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 # DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'FALSE'
 
 #where can we access the server
-ALLOWED_HOSTS = ['enigmatic-beyond-02288.herokuapp.com']
-# ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['enigmatic-beyond-02288.herokuapp.com']
+ALLOWED_HOSTS = []
 
 # Application definition
 
 INSTALLED_APPS = [
+    'pages',
     'trello_app',
     'django.contrib.admin',
     'django.contrib.auth',

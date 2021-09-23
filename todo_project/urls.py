@@ -18,6 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # Trello App's URLs are already included for you
+    # include app's urls
+    path('', include('pages.urls')),
     path('', include('trello_app.urls')),
 ]

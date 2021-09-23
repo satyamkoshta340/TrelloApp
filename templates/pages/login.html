@@ -1,0 +1,25 @@
+{% extends "pages/base.html" %}
+
+{% block extra_title %}
+login
+{% endblock %} 
+
+{% block heading %} 
+User login
+{% endblock %} 
+
+{% block content %} 
+<div id="login_box">
+    <form action="" method="POST">
+        {% csrf_token %}
+        Username: <p> <input name="username" type="text" placeholder="Please enter username" ></p>
+        Password: <p> <input name="password" type="password" placeholder="Please enter the password"></p>
+        <input type="submit" nmae= "subimit" value = "login">
+    
+        {% for message in messages %} 
+            {{ message }}
+        {% endfor %}
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "pages/base.html" %}
+
+{% block extra_title %}
+Home
+{% endblock %} 
+
+{% block heading %} 
+Trello App
+{% endblock %} 
+
+{% block content %} 
+<p>
+    <a href="{% url 'login' %}">Login</a>
+</p>
+
+<p>
+    <a href="{% url 'register' %}">Register</a>
+</p>
+
+{% endblock %}
